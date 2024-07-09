@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="selectedTab"
+            type="com.example.test.enums.DashboardTabs" />
+        <variable
+            name="viewmodel"
+            type="com.example.test.viewmodels.DashboardViewModel" />
+        <import type="com.example.test.enums.DashboardTabs"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_bottom_tab_bg"
+        android:weightSum="5">
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center_vertical"
+            android:onClick="@{(view) -> viewmodel.changeTab(DashboardTabs.HOME)}"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_tab_home"
+                android:tint="@{selectedTab == DashboardTabs.HOME ? @color/tab_selected : @color/tab_unselected}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@{selectedTab == DashboardTabs.HOME ? @color/tab_selected : @color/tab_unselected}"
+                android:text="@string/home"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> viewmodel.changeTab(DashboardTabs.PAYMENTS)}"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_tab_payments"
+                android:tint="@{selectedTab == DashboardTabs.PAYMENTS ? @color/tab_selected : @color/tab_unselected}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@{selectedTab == DashboardTabs.PAYMENTS ? @color/tab_selected : @color/tab_unselected}"
+                android:text="@string/payments"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_products"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> viewmodel.changeTab(DashboardTabs.PRODUCTS)}"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_tab_product"
+                android:tint="@{selectedTab == DashboardTabs.PRODUCTS ? @color/tab_selected : @color/tab_unselected}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@{selectedTab == DashboardTabs.PRODUCTS ? @color/tab_selected : @color/tab_unselected}"
+                android:text="@string/products"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_balance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> viewmodel.changeTab(DashboardTabs.BALANCE)}"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_tab_balance"
+                android:tint="@{selectedTab == DashboardTabs.BALANCE ? @color/tab_selected : @color/tab_unselected}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@{selectedTab == DashboardTabs.BALANCE ? @color/tab_selected : @color/tab_unselected}"
+                android:text="@string/balance_"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> viewmodel.changeTab(DashboardTabs.MORE)}"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_tab_more"
+                android:tint="@{selectedTab == DashboardTabs.MORE ? @color/tab_selected : @color/tab_unselected}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textColor="@{selectedTab == DashboardTabs.MORE ? @color/tab_selected : @color/tab_unselected}"
+                android:text="@string/more"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

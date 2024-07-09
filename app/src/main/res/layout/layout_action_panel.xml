@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.test.R" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_panel_bg_shadow"
+        android:paddingStart="@dimen/dp_24"
+        android:paddingEnd="@dimen/dp_24"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14">
+        <include layout="@layout/layout_action_item"
+            android:id="@+id/action_topup"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:title="@{@string/topup}"
+            app:imageRes="@{R.drawable.ic_wallet}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/action_transfer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/layout_action_item"
+            android:id="@+id/action_transfer"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:title="@{@string/transfer}"
+            app:imageRes="@{R.drawable.ic_transfer}"
+            app:layout_constraintStart_toEndOf="@id/action_topup"
+            app:layout_constraintEnd_toStartOf="@id/action_request"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/layout_action_item"
+            android:id="@+id/action_request"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:title="@{@string/request}"
+            app:imageRes="@{R.drawable.ic_request}"
+            app:layout_constraintStart_toEndOf="@id/action_transfer"
+            app:layout_constraintEnd_toStartOf="@id/action_history"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/layout_action_item"
+            android:id="@+id/action_history"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:title="@{@string/history}"
+            app:imageRes="@{R.drawable.ic_history}"
+            app:layout_constraintStart_toEndOf="@id/action_request"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

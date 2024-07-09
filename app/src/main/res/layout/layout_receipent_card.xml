@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="receipent"
+            type="com.example.test.ui_models.ReceiverUserModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg_white"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp">
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/avatar_circular_size_48"
+            android:layout_height="@dimen/avatar_circular_size_48"
+            android:background="@drawable/shape_circle_transparent"
+            tools:src="@drawable/pic_receipent"
+            app:imageResource="@{receipent.profilePhoto}"
+            android:clipToOutline="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="Rakesh Kumar Shaw"
+            android:layout_marginStart="10dp"
+            android:text="@{receipent.name}"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="Bank - 1000 1000 1000 1000"
+            android:layout_marginStart="10dp"
+            android:text="@{receipent.getFormattedAccount(context)}"
+            android:textColor="@color/black_50_alpha"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

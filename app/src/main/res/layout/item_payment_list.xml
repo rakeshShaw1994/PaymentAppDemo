@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="button"
+            type="com.example.test.ui_models.LabeledImage" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp">
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:imageResource="@{button.imageRes}"
+            android:contentDescription="@{button.title}"
+            android:padding="17dp"
+            tools:src="@drawable/ic_transfer"
+            android:background="@drawable/shape_rounded_gray"
+            app:layout_constraintStart_toStartOf="@id/tv_item"
+            app:layout_constraintEnd_toEndOf="@id/tv_item"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_item"
+            android:text="@{button.title}"
+            tools:text="Assurance"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_item"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

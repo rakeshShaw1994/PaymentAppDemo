@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="navIcon"
+            type="Integer" />
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="navVisible"
+            type="Boolean" />
+
+        <import type="android.view.View"/>
+    </data>
+
+    <com.google.android.material.appbar.AppBarLayout app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            app:contentInsetStart="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginBottom="10dp"
+                android:weightSum="1">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/toolbar_nav_size"
+                    android:layout_height="@dimen/toolbar_nav_size"
+                    android:visibility="@{navVisible ? View.VISIBLE : View.INVISIBLE}"
+                    app:imageResource="@{navIcon}"
+                    tools:src="@drawable/ic_back_arrow"
+                    android:layout_weight="0"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:clipToOutline="true"/>
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:text="Contacts"
+                    android:text="@{title}"
+                    android:textSize="@dimen/dp_24"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/contact_title_color"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    />
+            </LinearLayout>
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>

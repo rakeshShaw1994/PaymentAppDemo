@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_panel_card_corner">20dp</dimen>
+    <dimen name="radius_30">30dp</dimen>
+
+    <dimen name="action_icon_size">26dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+
+    <dimen name="toolbar_nav_size">30dp</dimen>
+    <dimen name="toolbar_menu_size">24dp</dimen>
+    <dimen name="avatar_circular_size">36dp</dimen>
+    <dimen name="avatar_circular_size_48">48dp</dimen>
+    //Text
+    <dimen name="medium">14sp</dimen>
+    <dimen name="toolbar_title_text">16sp</dimen>
+    <dimen name="toolbar_title_text_large">22sp</dimen>
+
+</resources>

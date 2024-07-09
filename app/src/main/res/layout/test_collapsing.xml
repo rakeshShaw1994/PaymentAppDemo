@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="UserEntity"
+            type="com.example.test.ui_models.UserDetailModel" />
+        <import type="com.example.test.R"/>
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DashboardActivity">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_gradient_blue"
+            />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent"
+            android:paddingTop="14dp"
+            tools:context=".ui.TestActivity">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_18"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="@android:color/transparent"
+                    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                    <LinearLayout
+                        android:layout_marginTop="?attr/actionBarSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="32dp"
+                        app:layout_collapseMode="none">
+                        <TextView
+                            android:id="@+id/tv_av_bal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/light_purple"
+                            android:text="@string/available_balance"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/tv_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="40sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            tools:text="$11,547.54"
+                            android:text="11547.54"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:layout_marginBottom="10dp"
+                            android:weightSum="1">
+                            <ImageView
+                                android:id="@+id/iv_avatar"
+                                android:layout_width="@dimen/avatar_circular_size"
+                                android:layout_height="@dimen/avatar_circular_size"
+                                android:background="@drawable/shape_circle_transparent"
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_weight="0"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:clipToOutline="true"/>
+                            <TextView
+                                android:id="@+id/toolbar_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="Hello, Rakesh"
+                                android:text="Hello, Rakesh"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/toolbar_title_text"
+                                android:textStyle="bold"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:textColor="@color/black_50_alpha"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="4dp"
+                                />
+                            <ImageView
+                                android:id="@+id/iv_notif"
+                                android:layout_width="@dimen/avatar_circular_size"
+                                android:layout_height="@dimen/avatar_circular_size"
+                                android:src="@drawable/ic_notif"
+                                app:tint="@color/black"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:clipToOutline="true"/>
+                        </LinearLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!--Now add the NestedScollView-->
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/lo_action_panel"
+                        app:layout_constraintBottom_toBottomOf="@id/lo_action_panel"/>
+
+                    <View
+                        android:id="@+id/bottom_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintTop_toTopOf="@id/divider1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/shape_top_rounded"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <include layout="@layout/layout_action_panel"
+                        android:id="@+id/lo_action_panel"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/dp_18"
+                        android:layout_marginEnd="@dimen/dp_18"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:elevation="@dimen/dp_8"/>
+
+                    <TextView
+                        android:id="@+id/tv_pay_list_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="@string/payment_list"
+                        android:layout_marginTop="25dp"
+                        app:layout_constraintTop_toBottomOf="@id/lo_action_panel"
+                        app:layout_constraintStart_toStartOf="@id/lo_action_panel"/>
+
+                    <GridView
+                        android:id="@+id/gv_payment_list"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        tools:visibility="gone"
+                        android:verticalSpacing="11dp"
+                        tools:listitem="@layout/item_payment_list"
+                        app:layout_constraintStart_toStartOf="@id/lo_action_panel"
+                        app:layout_constraintEnd_toEndOf="@id/lo_action_panel"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pay_list_label"
+                        android:layout_marginTop="@dimen/dp_12"/>
+
+                    <TextView
+                        android:id="@+id/tv_promo_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="@string/promo_and_discount"
+                        android:layout_marginTop="36dp"
+                        app:layout_constraintTop_toBottomOf="@id/gv_payment_list"
+                        app:layout_constraintStart_toStartOf="@id/lo_action_panel"/>
+
+                    <TextView
+                        android:id="@+id/tv_see_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/dark_purple_1"
+                        android:text="@string/see_more"
+                        app:layout_constraintTop_toTopOf="@id/tv_promo_label"
+                        app:layout_constraintStart_toEndOf="@id/tv_promo_label"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_promo_label"
+                        app:layout_constraintEnd_toEndOf="@id/lo_action_panel"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_promo"
+                        android:layout_width="0dp"
+                        android:layout_height="172dp"
+                        android:paddingStart="@dimen/dp_18"
+                        android:paddingEnd="@dimen/dp_18"
+                        android:clipToPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/tv_see_more"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="12dp"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_promo_discount"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+
+</layout>

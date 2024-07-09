@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">PaymentApp</string>
+    <string name="topup">Top up</string>
+    <string name="transfer">Transfer</string>
+    <string name="request">Request</string>
+    <string name="history">History</string>
+
+    <string name="available_balance">Available Balance</string>
+    <string name="payment_list">Payment List</string>
+    <string name="promo_and_discount">Promo &amp; Discount</string>
+    <string name="see_more">See more</string>
+
+    <string name="hello_user">Hello, %s</string>
+    <string name="balance">%1$s %2$.2f</string>
+
+    <string name="erase">Erase</string>
+    <string name="next">Next</string>
+
+    <string name="send_money">Send Money</string>
+    <string name="type_with_account">%1$s - %2$s</string>
+    <string name="transfer_amount">Transfer Amount</string>
+    <string name="datetime">Date &amp; time</string>
+    <string name="trans_ref">No. Ref</string>
+    <string name="see_detail">See Detail</string>
+    <string name="transfer_success">Transfer Successful!</string>
+    <string name="transfer_success_desc">Your money has been transfered\nsuccessfuly!</string>
+
+    <string name="done">Done</string>
+    <string name="contacts">Contacts</string>
+
+    <string name="home">Home</string>
+    <string name="payments">Payments</string>
+    <string name="products">Products</string>
+    <string name="balance_">Balance</string>
+    <string name="more">More</string>
+
+
+    <string name="content">With the idea of imparting programming
+      knowledge, Mr. Sandeep Jain, an IIT Roorkee alumnus started a
+      dream, GeeksforGeeks. Whether programming excites you or you feel
+      stifled, wondering how to prepare for interview questions or how to
+      ace data structures and algorithms, GeeksforGeeks is a one-stop solution.
+      With every tick of time, we are adding arrows in our quiver. From articles
+      on various computer science subjects to programming problems for practice,
+      from basic to premium courses, from technologies to entrance examinations,
+      we have been building ample content with superior quality. In a short span,
+      we have built a community of 1 Million+ Geeks around the world, 20,000+
+      Contributors and 500+ Campus Ambassadors in various colleges across the nation.
+      Our success stories include a lot of students who benefitted in their placements
+      and landed jobs at tech giants. Our vision is to build a gigantic network of
+      geeks and we are only a fraction of it yet.
+  </string>
+</resources>

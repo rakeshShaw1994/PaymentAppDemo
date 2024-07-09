@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.test.interfaces.NumberPadListener" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp">
+
+        <TextView
+            android:id="@+id/input_1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="1"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(1)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/input_2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="2"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(2)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@id/input_1"
+            app:layout_constraintEnd_toStartOf="@id/input_3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/input_3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="3"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(3)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/input_4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="4"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(4)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_1"/>
+
+        <TextView
+            android:id="@+id/input_5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="5"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(5)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@id/input_1"
+            app:layout_constraintEnd_toStartOf="@id/input_3"
+            app:layout_constraintTop_toTopOf="@id/input_4"/>
+
+        <TextView
+            android:id="@+id/input_6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="6"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(6)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_4"/>
+
+        <TextView
+            android:id="@+id/input_7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="7"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(7)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_4"/>
+
+        <TextView
+            android:id="@+id/input_8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="8"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(8)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@id/input_1"
+            app:layout_constraintEnd_toStartOf="@id/input_3"
+            app:layout_constraintTop_toTopOf="@id/input_7"/>
+
+        <TextView
+            android:id="@+id/input_9"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="9"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(9)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_7"/>
+
+        <ImageView
+            android:id="@+id/erase"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/dp_16"
+            android:src="@drawable/ic_numpad_erase"
+            android:contentDescription="@string/erase"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/shape_circle_transparent"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onEraseClicked()}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_7"/>
+
+        <TextView
+            android:id="@+id/input_0"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_circle_solid_white"
+            android:text="0"
+            android:textColor="@color/num_pad_text_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNumberInput(0)}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintStart_toEndOf="@id/input_1"
+            app:layout_constraintEnd_toStartOf="@id/input_3"
+            app:layout_constraintTop_toTopOf="@id/erase"/>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_numpad_next"
+            android:contentDescription="@string/next"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/shape_circle_transparent"
+            android:clipToOutline="true"
+            android:onClick="@{(view) -> listener.onNextClicked()}"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/erase"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
